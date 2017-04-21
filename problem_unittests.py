@@ -195,5 +195,7 @@ def test_train_nn(train_neural_network):
     train_neural_network(mock_session, test_optimizer, test_k, test_x, test_y)
 
     assert mock_session.run.called, 'Session not used'
+    
+    mock_session.close()
 
     _print_success_message()
